@@ -79,3 +79,19 @@ console.log(upper120);
 
 const upper120Second = upper70.filter((studente) => studente.Id > 120);
 console.log(upper120Second);
+
+// BONUS 1
+// Scriviamo una funzione che accetti tre argomenti, un array e due numeri (a più piccolo di b). La funzione ritornerà un nuovo array con i valori che nel primo hanno la posizione compresa tra i due numeri
+
+const array1 = ['1','3','4','5','6','9','12','45']
+function between(array, numMin, numMax){
+    let newArray = []
+    for(let i = 0; i < array.length; i++){
+        if(i >= numMin && i<= numMax){
+            newArray.push(array[i]);
+        }
+    }
+    return newArray;
+}
+let x = between(array1, 2, 6)
+console.log(x);
