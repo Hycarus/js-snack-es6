@@ -73,3 +73,9 @@ const upper70 = student.filter((studente) => studente.Grades > 70);
 console.log(upper70);
 const upper120 = student.filter((studente) => studente.Grades > 70 && studente.Id > 120);
 console.log(upper120);
+
+
+// SNACK 2 VARIANTE CON FILTER DAL SECONDO ARRAY
+
+const upper120Second = upper70.filter((studente) => studente.Id > 120);
+console.log(upper120Second);
