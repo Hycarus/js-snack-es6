@@ -95,3 +95,13 @@ function between(array, numMin, numMax){
 }
 let x = between(array1, 2, 6)
 console.log(x);
+
+// BONUS 1 CON FILTER 
+
+function between2(array, numMin, numMax){
+    let y = array.filter((element, index) => {
+        return index >= numMin && index <= numMax;
+    })
+    console.log(y);
+}
+let w = between2(array1, 2, 6);
