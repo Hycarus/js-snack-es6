@@ -212,31 +212,31 @@ function print(copySquadreCalcio){
     </div>
     `;
 }
-class Card {
-    title;
-    text;
-    image = 'idefault-image.jpg';
-    container;
-    constructor(title, text, image, container){
-        this.title = title;
-        this.text = text;
-        this.image = image;
-        this.container = container;
-    }
-    printCard(){
-        const divEl = document.createElement('div');
-        divEl.classlist.add('col-4');
-        const template = `
-        <div class="card">
-            <img src="img/${this.image}" class="card-img-top" alt="${this.title}">
-            <div class="card-body">
-                <h5 class="card-title">${this.title}</h5>
-                <p class="card-text">${this.text}</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>`;
-        divEl.innerHTML = template;
-    };
-}
+// class Card {
+//     title;
+//     text;
+//     image = 'idefault-image.jpg';
+//     container;
+//     constructor(title, text, image, container){
+//         this.title = title;
+//         this.text = text;
+//         this.image = image;
+//         this.container = container;
+//     }
+//     printCard(){
+//         const divEl = document.createElement('div');
+//         divEl.classlist.add('col-4');
+//         const template = `
+//         <div class="card">
+//             <img src="img/${this.image}" class="card-img-top" alt="${this.title}">
+//             <div class="card-body">
+//                 <h5 class="card-title">${this.title}</h5>
+//                 <p class="card-text">${this.text}</p>
+//                 <a href="#" class="btn btn-primary">Go somewhere</a>
+//             </div>
+//         </div>`;
+//         divEl.innerHTML = template;
+//     };
+// }
 
 
