@@ -102,6 +102,51 @@ function between2(array, numMin, numMax){
     let y = array.filter((element, index) => {
         return index >= numMin && index <= numMax;
     })
-    console.log(y);
+    return y
 }
 let w = between2(array1, 2, 6);
+console.log(w);
+
+
+// SNACK 3
+
+// Creare un array di oggetti:
+// Ogni oggetto descriverà una bici da corsa con le seguenti proprietà: nome e peso.
+// Stampare in console la bici con peso minore utilizzando destructuring e template literal
+
+const bikes = [
+    {
+        nome: 'Bianchi',
+        peso: 34
+    },
+    {
+        nome: 'Casati',
+        peso: 56
+    },
+    {
+        nome: 'Olmo',
+        peso: 63
+    },
+    {
+        nome: 'Atala',
+        peso: 24
+    },
+    {
+        nome: 'Colnago',
+        peso: 32
+    },
+    {
+        nome: 'Bottecchia',
+        peso: 51
+    }
+]
+
+const min = [];
+bikes.forEach((element, index)=> {
+    const {peso} = bikes[index];
+    min.push(peso);
+})
+const res = bikes.filter((element)=>{
+    return element.nome && element.peso === Math.min(...min);
+})
+console.log(`La bici che pesa di meno è: ${res[0].nome} e pesa ${res[0].peso}`);
