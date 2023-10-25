@@ -1,4 +1,5 @@
 const resultEl = document.querySelector('.alert');
+const app = document.getElementById('app');
 
 // SNACK 1
 const invitati = [ 'Brad Pitt', 'Johnny Depp', 'Lady Gaga', 'Cristiano Ronaldo', 'Georgina Rodriguez', 'Chiara Ferragni', 'Fedez', 'George Clooney', 'Amal Clooney', 'Maneskin'];
@@ -150,7 +151,11 @@ const res = bikes.filter((element)=>{
     return element.nome && element.peso === Math.min(...min);
 })
 console.log(`La bici che pesa di meno è: ${res[0].nome} e pesa ${res[0].peso}kg`);
-
+document.body.innerHTML = `
+<div class="m-5">
+    La bici che pesa di meno è: ${res[0].nome} e pesa ${res[0].peso}kg
+</div>
+`;
 
 // SNACK 4
 
@@ -195,7 +200,43 @@ squadreCalcio.forEach((element, index)=>{
     console.log(copySquadreCalcio);
     const {nome, falliSubiti} = copySquadreCalcio;
     console.log({nome, falliSubiti});
+    print(copySquadreCalcio);
 });
 
+function print(copySquadreCalcio){
+    const div = document.createElement('div');
+    document.body.append(div);
+    div.innerHTML = `
+    <div class="ms-5 py-3">
+        ${copySquadreCalcio.nome} ha subito ${copySquadreCalcio.falliSubiti} falli e ha fatto ${copySquadreCalcio.punti} punti
+    </div>
+    `;
+}
+class Card {
+    title;
+    text;
+    image = 'idefault-image.jpg';
+    container;
+    constructor(title, text, image, container){
+        this.title = title;
+        this.text = text;
+        this.image = image;
+        this.container = container;
+    }
+    printCard(){
+        const divEl = document.createElement('div');
+        divEl.classlist.add('col-4');
+        const template = `
+        <div class="card">
+            <img src="img/${this.image}" class="card-img-top" alt="${this.title}">
+            <div class="card-body">
+                <h5 class="card-title">${this.title}</h5>
+                <p class="card-text">${this.text}</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>`;
+        divEl.innerHTML = template;
+    };
+}
 
 
