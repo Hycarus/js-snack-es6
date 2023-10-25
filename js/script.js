@@ -149,4 +149,4 @@ bikes.forEach((element, index)=> {
 const res = bikes.filter((element)=>{
     return element.nome && element.peso === Math.min(...min);
 })
-console.log(`La bici che pesa di meno è: ${res[0].nome} e pesa ${res[0].peso}`);
+console.log(`La bici che pesa di meno è: ${res[0].nome} e pesa ${res[0].peso}kg`);
